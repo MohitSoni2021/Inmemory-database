@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 #include <deque>
 #include <unordered_map>
@@ -82,7 +84,7 @@ class RedisHash : public RedisObject {
     
     public:
         RedisHash() = default;
-        std::string type() const override { return "Hash"; };
+        std::string type() const override { return "hash"; };
         std::string toString() const override {
             std::string res = "{";
             bool first = true;
