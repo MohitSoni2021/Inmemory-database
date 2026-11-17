@@ -56,6 +56,12 @@ class Redis {
             }
         };
 
+        std::string typeOf(const std::string& key) {
+            auto it = data.find(key);
+            if(it == data.end()) return "!(nil)";
+            return it->second.value->type();
+        }
+
         RedisObject* getObject(const std::string& key) {
             auto it = data.find(key);
             if (it == data.end()) {

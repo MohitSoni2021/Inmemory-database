@@ -2,6 +2,8 @@
 
 #include "../../include/commands/SetCommand.hpp"
 #include "../../include/commands/GetCommand.hpp"
+#include "../../include/commands/DeleteCommand.hpp"
+#include "../../include/commands/TypeCommand.hpp"
 
 #include <algorithm>
 #include <cctype>
@@ -11,6 +13,8 @@
 CommandExecutor::CommandExecutor() {
     commands["SET"] = std::make_unique<SetCommand>();
     commands["GET"] = std::make_unique<GetCommand>();
+    commands["DELETE"] = std::make_unique<DeleteCommand>();
+    commands["TYPEOF"] = std::make_unique<TypeCommand>();
 };
 
 // Now building the execute function;

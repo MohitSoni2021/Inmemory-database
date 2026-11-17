@@ -11,6 +11,8 @@ add_executable(redis
 
     src/commands/SetCommand.cpp
     src/commands/GetCommand.cpp
+    src/commands/DeleteCommand.cpp
+    src/commands/TypeCommand.cpp
 
     src/executor/CommandExecutor.cpp
 )
